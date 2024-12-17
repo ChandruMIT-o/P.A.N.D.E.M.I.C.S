@@ -1,0 +1,129 @@
+,Route,Airline,Source,Destination,Total_Stops
+0,BLR → AMD → DEL,Air India,Banglore,New Delhi,1 stop
+1,BLR → BBI → DEL,Air India,Banglore,New Delhi,1 stop
+2,BLR → BDQ → DEL,Jet Airways,Banglore,New Delhi,1 stop
+3,BLR → BOM → AMD → DEL,Air India,Banglore,New Delhi,2 stops
+4,BLR → BOM → BHO → DEL,Air India,Banglore,New Delhi,2 stops
+5,BLR → BOM → DEL,Jet Airways,Banglore,New Delhi,1 stop
+6,BLR → BOM → IDR → DEL,Air India,Banglore,New Delhi,2 stops
+7,BLR → BOM → IDR → GWL → DEL,Air India,Banglore,New Delhi,3 stops
+8,BLR → BOM → IXC → DEL,Air India,Banglore,New Delhi,2 stops
+9,BLR → BOM → JDH → DEL,Air India,Banglore,New Delhi,2 stops
+10,BLR → BOM → NAG → DEL,Air India,Banglore,New Delhi,2 stops
+11,BLR → BOM → UDR → DEL,Air India,Banglore,New Delhi,2 stops
+12,BLR → CCU → BBI → DEL,Air India,Banglore,New Delhi,2 stops
+13,BLR → CCU → BBI → HYD → DEL,Air India,Banglore,New Delhi,3 stops
+14,BLR → CCU → BBI → HYD → VGA → DEL,Air India,Banglore,New Delhi,4 stops
+15,BLR → CCU → DEL,Air India,Banglore,New Delhi,1 stop
+16,BLR → CCU → GAU → DEL,Air India,Banglore,New Delhi,2 stops
+17,BLR → COK → DEL,Air India,Banglore,New Delhi,1 stop
+18,BLR → DEL,IndiGo,Banglore,New Delhi,non-stop
+19,BLR → GAU → DEL,Air India,Banglore,New Delhi,1 stop
+20,BLR → GOI → DEL,GoAir,Banglore,New Delhi,1 stop
+21,BLR → HBX → BOM → AMD → DEL,Air India,Banglore,New Delhi,3 stops
+22,BLR → HBX → BOM → BHO → DEL,Air India,Banglore,New Delhi,3 stops
+23,BLR → HBX → BOM → NAG → DEL,Air India,Banglore,New Delhi,3 stops
+24,BLR → HYD → DEL,IndiGo,Banglore,New Delhi,1 stop
+25,BLR → HYD → VGA → DEL,Air India,Banglore,New Delhi,2 stops
+26,BLR → IDR → DEL,IndiGo,Banglore,New Delhi,1 stop
+27,BLR → LKO → DEL,IndiGo,Banglore,New Delhi,1 stop
+28,BLR → MAA → DEL,Air India,Banglore,New Delhi,1 stop
+29,BLR → NAG → DEL,IndiGo,Banglore,New Delhi,1 stop
+30,BLR → PNQ → DEL,SpiceJet,Banglore,New Delhi,1 stop
+31,BLR → STV → DEL,IndiGo,Banglore,New Delhi,1 stop
+32,BLR → TRV → COK → DEL,Air India,Banglore,New Delhi,2 stops
+33,BLR → VGA → DEL,Air India,Banglore,New Delhi,1 stop
+34,BLR → VGA → HYD → DEL,Air India,Banglore,New Delhi,2 stops
+35,BLR → VGA → VTZ → DEL,Air India,Banglore,New Delhi,2 stops
+36,BOM → AMD → ISK → HYD,Air India,Mumbai,Hyderabad,2 stops
+37,BOM → BBI → HYD,Air India,Mumbai,Hyderabad,1 stop
+38,BOM → BDQ → DEL → HYD,Jet Airways,Mumbai,Hyderabad,2 stops
+39,BOM → BHO → DEL → HYD,Air India,Mumbai,Hyderabad,2 stops
+40,BOM → BLR → CCU → BBI → HYD,Air India,Mumbai,Hyderabad,3 stops
+41,BOM → BLR → HYD,Air India,Mumbai,Hyderabad,1 stop
+42,BOM → CCU → HYD,Air India,Mumbai,Hyderabad,1 stop
+43,BOM → COK → MAA → HYD,Air India,Mumbai,Hyderabad,2 stops
+44,BOM → DED → DEL → HYD,Jet Airways,Mumbai,Hyderabad,2 stops
+45,BOM → DEL → HYD,Vistara,Mumbai,Hyderabad,1 stop
+46,BOM → GOI → HYD,IndiGo,Mumbai,Hyderabad,1 stop
+47,BOM → GOI → PNQ → HYD,Air India,Mumbai,Hyderabad,2 stops
+48,BOM → HYD,Air India,Mumbai,Hyderabad,non-stop
+49,BOM → IDR → DEL → HYD,Air India,Mumbai,Hyderabad,2 stops
+50,BOM → JAI → DEL → HYD,Air India,Mumbai,Hyderabad,2 stops
+51,BOM → JDH → DEL → HYD,Air India,Mumbai,Hyderabad,2 stops
+52,BOM → JDH → JAI → DEL → HYD,Air India,Mumbai,Hyderabad,3 stops
+53,BOM → JLR → HYD,SpiceJet,Mumbai,Hyderabad,1 stop
+54,BOM → MAA → HYD,Air India,Mumbai,Hyderabad,1 stop
+55,BOM → NDC → HYD,Trujet,Mumbai,Hyderabad,1 stop
+56,BOM → RPR → VTZ → HYD,Air India,Mumbai,Hyderabad,2 stops
+57,BOM → UDR → DEL → HYD,Jet Airways,Mumbai,Hyderabad,2 stops
+58,BOM → VNS → DEL → HYD,Jet Airways,Mumbai,Hyderabad,2 stops
+59,CCU → AMD → BLR,GoAir,Kolkata,Banglore,1 stop
+60,CCU → BBI → BLR,Air India,Kolkata,Banglore,1 stop
+61,CCU → BBI → BOM → BLR,Air India,Kolkata,Banglore,2 stops
+62,CCU → BBI → HYD → BLR,Air India,Kolkata,Banglore,2 stops
+63,CCU → BBI → IXR → DEL → BLR,Air India,Kolkata,Banglore,3 stops
+64,CCU → BLR,SpiceJet,Kolkata,Banglore,non-stop
+65,CCU → BOM → AMD → BLR,Air India,Kolkata,Banglore,2 stops
+66,CCU → BOM → BLR,Jet Airways,Kolkata,Banglore,1 stop
+67,CCU → BOM → COK → BLR,Air India,Kolkata,Banglore,2 stops
+68,CCU → BOM → GOI → BLR,Air India,Kolkata,Banglore,2 stops
+69,CCU → BOM → HBX → BLR,Air India,Kolkata,Banglore,2 stops
+70,CCU → BOM → PNQ → BLR,Jet Airways,Kolkata,Banglore,2 stops
+71,CCU → BOM → TRV → BLR,Air India,Kolkata,Banglore,2 stops
+72,CCU → DEL → AMD → BLR,Air India,Kolkata,Banglore,2 stops
+73,CCU → DEL → BLR,Jet Airways,Kolkata,Banglore,1 stop
+74,CCU → DEL → COK → BLR,Air India,Kolkata,Banglore,2 stops
+75,CCU → DEL → COK → TRV → BLR,Air India,Kolkata,Banglore,3 stops
+76,CCU → DEL → VGA → BLR,Air India,Kolkata,Banglore,2 stops
+77,CCU → GAU → BLR,Jet Airways,Kolkata,Banglore,1 stop
+78,CCU → GAU → DEL → BLR,Air India,Kolkata,Banglore,2 stops
+79,CCU → GAU → IMF → DEL → BLR,Air India,Kolkata,Banglore,3 stops
+80,CCU → HYD → BLR,Air India,Kolkata,Banglore,1 stop
+81,CCU → IXA → BLR,IndiGo,Kolkata,Banglore,1 stop
+82,CCU → IXB → BLR,SpiceJet,Kolkata,Banglore,1 stop
+83,CCU → IXB → DEL → BLR,Air India,Kolkata,Banglore,2 stops
+84,CCU → IXR → BBI → BLR,Air India,Kolkata,Banglore,2 stops
+85,CCU → IXR → DEL → BLR,Air India,Kolkata,Banglore,2 stops
+86,CCU → IXZ → MAA → BLR,Air India,Kolkata,Banglore,2 stops
+87,CCU → JAI → BOM → BLR,Air India,Kolkata,Banglore,2 stops
+88,CCU → JAI → DEL → BLR,Air India,Kolkata,Banglore,2 stops
+89,CCU → KNU → BLR,SpiceJet,Kolkata,Banglore,1 stop
+90,CCU → MAA → BLR,SpiceJet,Kolkata,Banglore,1 stop
+91,CCU → NAG → BLR,IndiGo,Kolkata,Banglore,1 stop
+92,CCU → PAT → BLR,IndiGo,Kolkata,Banglore,1 stop
+93,CCU → PNQ → BLR,IndiGo,Kolkata,Banglore,1 stop
+94,CCU → RPR → HYD → BLR,IndiGo,Kolkata,Banglore,2 stops
+95,CCU → VNS → DEL → BLR,Air India,Kolkata,Banglore,2 stops
+96,CCU → VTZ → BLR,IndiGo,Kolkata,Banglore,1 stop
+97,DEL → AMD → BOM → COK,Air India,Delhi,Cochin,2 stops
+98,DEL → AMD → COK,GoAir,Delhi,Cochin,1 stop
+99,DEL → ATQ → BOM → COK,Jet Airways,Delhi,Cochin,2 stops
+100,DEL → BBI → COK,IndiGo,Delhi,Cochin,1 stop
+101,DEL → BDQ → BOM → COK,Jet Airways,Delhi,Cochin,2 stops
+102,DEL → BHO → BOM → COK,Air India,Delhi,Cochin,2 stops
+103,DEL → BLR → COK,Air India,Delhi,Cochin,1 stop
+104,DEL → BOM → COK,Multiple carriers,Delhi,Cochin,1 stop
+105,DEL → CCU → BOM → COK,Air India,Delhi,Cochin,2 stops
+106,DEL → COK,Jet Airways,Delhi,Cochin,non-stop
+107,DEL → DED → BOM → COK,Jet Airways,Delhi,Cochin,2 stops
+108,DEL → GOI → BOM → COK,Air India,Delhi,Cochin,2 stops
+109,DEL → GWL → IDR → BOM → COK,Multiple carriers,Delhi,Cochin,3 stops
+110,DEL → HYD → BOM → COK,Air India,Delhi,Cochin,2 stops
+111,DEL → HYD → COK,Multiple carriers,Delhi,Cochin,1 stop
+112,DEL → HYD → MAA → COK,IndiGo,Delhi,Cochin,2 stops
+113,DEL → IDR → BOM → COK,Jet Airways,Delhi,Cochin,2 stops
+114,DEL → IXC → BOM → COK,Jet Airways,Delhi,Cochin,2 stops
+115,DEL → IXU → BOM → COK,Multiple carriers,Delhi,Cochin,2 stops
+116,DEL → JAI → BOM → COK,Jet Airways,Delhi,Cochin,2 stops
+117,DEL → JDH → BOM → COK,Air India,Delhi,Cochin,2 stops
+118,DEL → LKO → BOM → COK,Jet Airways,Delhi,Cochin,2 stops
+119,DEL → LKO → COK,IndiGo,Delhi,Cochin,1 stop
+120,DEL → MAA → BOM → COK,Jet Airways,Delhi,Cochin,2 stops
+121,DEL → MAA → COK,Air India,Delhi,Cochin,1 stop
+122,DEL → NAG → BOM → COK,Jet Airways,Delhi,Cochin,2 stops
+123,DEL → PNQ → COK,SpiceJet,Delhi,Cochin,1 stop
+124,DEL → RPR → NAG → BOM → COK,Air India,Delhi,Cochin,3 stops
+125,DEL → TRV → COK,Air India,Delhi,Cochin,1 stop
+126,DEL → UDR → BOM → COK,Air India,Delhi,Cochin,2 stops
+127,MAA → CCU,Air India,Chennai,Kolkata,non-stop
