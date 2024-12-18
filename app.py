@@ -143,8 +143,8 @@ st.plotly_chart(fig)
 
 st.header("Infection Spread Visualization")
 
-if st.button("Generate Map Sequences"):
-    progress_bar = st.progress(0, text="Generating Map Sequences...")
+if st.button("Generate Video"):
+    progress_bar = st.progress(0, text="Generating Video Sequences...")
 
     airports_selected = airports[['lon', 'lat', 'population_density']]
     airports_selected.columns = ['X', 'Y', 'population_density']  
@@ -156,14 +156,12 @@ if st.button("Generate Map Sequences"):
 
     all_nodes.reset_index(drop=True, inplace=True)
 
-    # Function to update and display the map for each time step
     def update_map(I, t):
         map_center = [all_nodes['Y'].mean(), all_nodes['X'].mean()]
         disease_map = folium.Map(location=map_center, zoom_start=6)
         max_infections = max(I) if max(I) > 0 else 1
         normalized_infections = I / max_infections
 
-        # Adding infection markers to the map for each node
         for i, node in all_nodes.iterrows():
             intensity = min(1, normalized_infections[i])
             folium.CircleMarker(
@@ -175,15 +173,43 @@ if st.button("Generate Map Sequences"):
                 popup=f"Day {t}: Infections {int(I[i])}",
             ).add_to(disease_map)
 
-        # Display the map in Streamlit
-        st.write(f"Day {t} - Infection Spread")
-        st.components.v1.html(disease_map._repr_html_(), height=600)
-
-    # Loop through each time step and update the map
     for t, I in enumerate(I_per_timestep):
-        progress_bar.progress((t + 1) / len(I_per_timestep), text=f"Generating Map Sequences: {t}/{params['time_steps']}")
+        progress_bar.progress((t + 1) / len(I_per_timestep), text=f"Generating Video Sequences: {t}/{params['time_steps']}")
         update_map(I, t)
 
+    progress_bar.empty() 
+    progress_bar2 = st.progress(0, text="Compiling and Exporting Video...")
+    
+    def animate_infection_spread(I_per_timestep):
+        fig, ax = plt.subplots(figsize=(10, 10))
+        scatter = ax.scatter(all_nodes['X'], all_nodes['Y'], c=I_per_timestep[0], cmap='Reds', s=20, alpha=0.8)
+
+        def update(frame):
+            scatter.set_array(I_per_timestep[frame])
+            ax.set_title(f"Infection Spread (Day {frame})")
+            return scatter,
+        
+        progress_bar2.progress(30, text=f"Compiling and Exporting Video [Few More Seconds]...")
+
+        # Create a temporary file for storing the video
+        with tempfile.NamedTemporaryFile(delete=False, suffix='.mp4') as temp_file:
+            ani = FuncAnimation(fig, update, frames=len(I_per_timestep), blit=False)
+            temp_file_path = temp_file.name
+            ani.save(temp_file_path, fps=5)
+
+        # Read the video file back into a BytesIO object for streaming
+        with open(temp_file_path, 'rb') as f:
+            video_data = f.read()
+
+        # Clean up the temporary file
+        os.remove(temp_file_path)
+
+        return video_data
+
+    video_data = animate_infection_spread(I_per_timestep)
+    st.success("Video generation complete!")
+
     progress_bar.empty()
-    st.success("Map generation complete!")
+    st.video(video_data)
+
 
