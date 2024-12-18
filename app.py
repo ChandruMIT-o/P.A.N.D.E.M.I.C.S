@@ -8,6 +8,9 @@ import matplotlib.pyplot as plt
 import os
 import folium
 from matplotlib.animation import FuncAnimation
+from io import BytesIO
+import os
+import tempfile
 
 st.set_page_config(layout="wide")
 
@@ -139,10 +142,6 @@ st.plotly_chart(fig)
 
 
 st.header("Infection Spread Visualization")
-VIDEO_FILE = "infection_animation.mp4"
-
-if os.path.exists(VIDEO_FILE):
-    os.remove(VIDEO_FILE)
 
 if st.button("Generate Video"):
     progress_bar = st.progress(0, text="Generating Video Sequences...")
@@ -184,23 +183,33 @@ if st.button("Generate Video"):
     def animate_infection_spread(I_per_timestep):
         fig, ax = plt.subplots(figsize=(10, 10))
         scatter = ax.scatter(all_nodes['X'], all_nodes['Y'], c=I_per_timestep[0], cmap='Reds', s=20, alpha=0.8)
-        # colorbar = plt.colorbar(scatter, ax=ax)
-        # colorbar.set_label("Infectious Cases")
 
         def update(frame):
             scatter.set_array(I_per_timestep[frame])
             ax.set_title(f"Infection Spread (Day {frame})")
             return scatter,
-    
+        
         progress_bar2.progress(30, text=f"Compiling and Exporting Video [Few More Seconds]...")
 
-        ani = FuncAnimation(fig, update, frames=len(I_per_timestep), blit=False)
-        ani.save(VIDEO_FILE, fps=5)
+        # Create a temporary file for storing the video
+        with tempfile.NamedTemporaryFile(delete=False, suffix='.mp4') as temp_file:
+            ani = FuncAnimation(fig, update, frames=len(I_per_timestep), blit=False)
+            temp_file_path = temp_file.name
+            ani.save(temp_file_path, fps=5)
 
-    animate_infection_spread(I_per_timestep)
-    progress_bar2.empty() 
+        # Read the video file back into a BytesIO object for streaming
+        with open(temp_file_path, 'rb') as f:
+            video_data = f.read()
 
+        # Clean up the temporary file
+        os.remove(temp_file_path)
+
+        return video_data
+
+    video_data = animate_infection_spread(I_per_timestep)
     st.success("Video generation complete!")
 
-if os.path.exists(VIDEO_FILE):
-    st.video(VIDEO_FILE)
+    progress_bar.empty()
+    st.video(video_data)
+
+
