@@ -4,3 +4,4 @@ networkx
 plotly
 matplotlib
 folium
+imageio[ffmpeg]
