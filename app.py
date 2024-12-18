@@ -12,6 +12,10 @@ from io import BytesIO
 import os
 import tempfile
 
+import matplotlib.pyplot as plt
+plt.rcParams['animation.ffmpeg_path'] = 'ffmpeg'
+
+
 st.set_page_config(layout="wide")
 
 @st.cache_data
@@ -208,6 +212,7 @@ if st.button("Generate Video"):
 
     video_data = animate_infection_spread(I_per_timestep)
     st.success("Video generation complete!")
+    progress_bar2.empty()
 
     progress_bar.empty()
     st.video(video_data)
